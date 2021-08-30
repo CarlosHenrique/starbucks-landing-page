@@ -12,10 +12,9 @@
     <section>
       <div class="circle"></div>
       <header>
-        <a href="#"
-          ><img class="logo" src="/assets/img/logo.png" alt="Logo do starbucks"
-        /></a>
-        <ul>
+        <a href="#"><img class="logo" src="/assets/img/logo.png" alt="Logo do starbucks"/></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
           <li><a href="#">Home</a></li>
           <li><a href="#">Menu</a></li>
           <li><a href="#">What's New</a></li>
@@ -67,6 +66,14 @@
           const circle = document.querySelector(".circle");
           circle.style.background = color;
       }
+
+      function toggleMenu(){
+          let navigation = document.querySelector('.navigation');
+          let menuToggle = document.querySelector('.toggle');
+          menuToggle.classList.toggle('active');
+          navigation.classList.toggle('active');
+      }
+
     </script>
   </body>
 </html>

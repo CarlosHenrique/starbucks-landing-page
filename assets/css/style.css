@@ -106,6 +106,7 @@ header ul li a{
     left: 50%;
     bottom: 2rem;
     transform: translateX(-50%);
+    display: flex;
 }
 .thumb li{
     list-style: none;
@@ -150,4 +151,98 @@ header ul li a{
     height: 100%;
     background: #017143;
     clip-path: circle(60rem at right 76rem);
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 2rem;
+    }
+    header .logo{
+        max-width: 6rem;
+    }
+
+    header ul{
+        display: none;
+    }
+    header ul li a{
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    header ul.navigation.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        z-index: 10;
+    }
+    section{
+        padding: 2rem 2rem 12rem;
+    }
+    .content{
+        flex-direction: column;
+        margin-top: 10rem;
+    }
+    .content.textBox{
+        max-width: 100%;
+    }
+    .content .textBox h2{
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .circle{
+        clip-path: circle(40rem at center bottom);
+    }
+    .content .imgBox{
+        width: 100%;
+        justify-content: center;
+    }
+    .content .imgBox img{
+        max-width: 25rem;
+    }
+   
+    .thumb li img{
+       
+        max-width: 4rem;
+    }
+    .sci{
+        background-color: #017143;
+        right: 0;
+        width: 5rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    .toggle{
+        z-index: 11;
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        background: url(/assets/img/menu.png);
+        background-size: 3rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+    }
+    .toggle.active{
+        position: fixed;
+        right: 2rem;
+        background: url(/assets/img/close.png);
+        background-size: 2.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+}
+
+@media (max-width: 500px){
+    .content .textBox h2{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
 }
